@@ -1,0 +1,108 @@
+/* 基础设置 */
+* {
+    font-family: sans-serif;
+}
+body {
+    background: #eaedf1;
+    margin: 0px;
+}
+
+/* 布局设置 */
+@media (min-width: 0px) and (max-width: 320px) {
+    header, main, footer {
+        padding: 5% 5%;
+    }
+}
+@media (min-width: 321px) and (max-width: 720px) {
+    header, main, footer {
+        padding: 5% 10%;
+    }
+}
+@media (min-width: 721px) {
+    header, main, footer {
+        padding: 5% 20%;
+    }
+}
+
+/* 打印设置 */
+@media print {
+    body *{
+        visibility: hidden;
+    }
+    .printArea, .printArea * {
+        visibility: visible;
+    }
+    .printArea {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right:0;
+        bottom:0;
+    }
+}
+
+
+/* header 样式 */
+header {
+    background: #FFFFFF;
+}
+
+/* information 样式 */
+#information div {
+    padding-top: 5%;
+}
+#information input {
+    width: 60%;
+    height: 40px;
+}
+.myInput {
+    font-size: medium;
+    margin-top: 5%;
+    color: #000;
+}
+
+/* result 样式 */
+img {
+    width: 100%;
+    object-fit: cover;
+    margin-top: 5%;
+}
+
+
+/* button按钮 */
+button {
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    font-size: 12px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    font-size: medium;
+    margin: 5% 5% 5% 0;
+    width: 30%;
+    height: 40px;
+
+    &:hover {
+        background-color: rgb(59, 163, 63);
+    }
+
+    &:active {
+        background-color: rgb(33, 133, 36);
+    }
+}
+
+
+/* 显示隐藏样式 */
+#information {
+    display: block;
+}
+#result {
+    display: none;
+}
+
+/* footer 样式 */
+footer {
+    font-size: 10pt;
+    color: #999;
+    background-color: #FFFFFF;
+}

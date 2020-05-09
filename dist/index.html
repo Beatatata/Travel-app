@@ -1,0 +1,7 @@
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>行程助手</title></head><body><div id="app"><header><h1>行程助手</h1><h5>帮助您记录行程时间预测行程天气</h5></header><main><div id="information"><div><h3>您的行程地</h3><input placeholder="请输入" class="myInput" id="adress"></div><div><h3>您的行程时间</h3><input type="date" class="myInput" id="time"></div><button class="button" id="generate" onclick="Client.performAction()">提交</button></div><div id="result"><div class="printArea"><div id="myImg"><img></div><div id="bourn"></div><div id="countdown"></div><div id="localInfo"></div></div><div id="buttonArea"><button class="button" id="print" onclick="window.print()">打印</button> <button class="button" id="reflash" onclick="location.reload()">重置</button></div></div></main><footer><div>@Beata</div></footer></div><script>// Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }</script><script src="main.js"></script></body></html>
